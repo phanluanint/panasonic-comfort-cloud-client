@@ -15,8 +15,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # ✅ Install Deno first
+      - name: Setup Deno
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+
+      # ✅ Install npm dependencies for Deno
       - name: Install npm dependencies for Deno
         run: deno cache --node-modules-dir
 
+      # ✅ Publish package to JSR
       - name: Publish package
         run: npx jsr publish

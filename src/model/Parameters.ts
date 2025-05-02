@@ -9,7 +9,7 @@ import {
   NanoeMode
 } from '../domain/enums'
 
-export interface Parameters {
+export type Parameters = {
   [key: string]: any
   operate?: Power
   operationMode?: OperationMode

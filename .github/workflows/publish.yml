@@ -15,5 +15,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Install npm dependencies for Deno
+        run: deno cache --node-modules-dir
+
       - name: Publish package
         run: npx jsr publish

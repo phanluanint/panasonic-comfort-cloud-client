@@ -184,7 +184,7 @@ export class ComfortCloudClient {
     return this.setParameters(device.guid, device.parameters)
   }
 
-  async setParameters(guid: string, parameters: Parameters) {
+  async setParameters(guid: string, parameters: Parameters): Promise<any> {
     const body = {
       deviceGuid: guid,
       parameters: parameters,
@@ -209,7 +209,7 @@ export class ComfortCloudClient {
     return null
   }
 
-  async getDeviceHistoryData(deviceGuid: string, date: Date, dataMode: DataMode, timezone: string = '+00:00') {
+  async getDeviceHistoryData(deviceGuid: string, date: Date, dataMode: DataMode, timezone: string = '+00:00'): Promise<any> {
     
     const dateString = getDateForHistoryData(date)
     const body = {

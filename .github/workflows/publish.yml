@@ -23,7 +23,7 @@ jobs:
 
       # ✅ Install npm dependencies for Deno
       - name: Install npm dependencies for Deno
-        run: deno cache --node-modules-dir
+        run: deno cache --node-modules-dir src/index.ts
 
       # ✅ Publish package to JSR
       - name: Publish package

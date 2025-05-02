@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 
-import { ComfortCloudClient } from './ComfortCloudClient.js'
-import { Group } from './model/Group.js'
-import { Device } from './model/Device.js'
+import { ComfortCloudClient } from './ComfortCloudClient'
+import { Group } from './model/Group'
+import { Device } from './model/Device'
 
 import { input, useEffect } from '@inquirer/prompts'
 import password from '@inquirer/password'
 import select from '@inquirer/select'
-import { DataMode } from './domain/enums.js'
-import { OAuthClient } from './OAuthClient.js'
+import { DataMode } from './domain/enums'
+import { OAuthClient } from './OAuthClient'
 
 type Command = 'get-group' | 'get-device' | 'refresh-token' | 'print-tokens' | 'exit' | null
 type DeviceCommand = 'get-history' | 'print-device' | 'exit' | null
